@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0d0f13">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Run + Strength">
+  <title>Run + Strength</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="top">
+      <div><h1>Run + Strength</h1><p>Build the engine. Keep the muscle.</p></div>
+      <span id="statusPill" class="pill">Week 2</span>
+    </header>
+
+    <section id="runView" class="view active">
+      <div class="hero-card">
+        <div class="eyebrow">CURRENT RUN</div>
+        <div id="currentWeekTitle" class="hero-title">Week 2</div>
+        <div id="currentWeekPlan" class="hero-plan">2:00 run / 3:00 walk × 6</div>
+        <div id="currentWeekMeta" class="hero-meta">30 min total • 12 min running</div>
+        <button class="primary" id="startRunBtn">Start Run</button>
+      </div>
+      <h2>8-Week Progression</h2>
+      <div id="weekCards" class="stack"></div>
+    </section>
+
+    <section id="liftView" class="view">
+      <div class="segmented">
+        <button id="liftABtn" class="segment active">Workout A</button>
+        <button id="liftBBtn" class="segment">Workout B</button>
+      </div>
+      <div class="hero-card compact">
+        <div class="eyebrow">FULL BODY</div>
+        <div id="liftTitle" class="hero-title">A — Horizontal</div>
+        <div class="hero-meta">~35 min lifting + 9:30 finisher</div>
+      </div>
+      <div id="exerciseCards" class="stack"></div>
+      <div class="tip">Keep most sets at about 1–3 reps in reserve. When all work sets hit the top of the rep range cleanly, add a little weight next time.</div>
+      <h2>Metabolic Finishers</h2>
+      <p class="section-note">5 exercises × 30 sec = 2:30. Repeat 3 rounds with 1:00 rest between rounds.</p>
+      <div id="finisherCards" class="stack"></div>
+    </section>
+
+    <section id="timerView" class="view">
+      <div class="timer-card">
+        <div id="timerKind" class="eyebrow">RUN TIMER</div>
+        <div id="timerTitle" class="timer-title">Ready</div>
+        <div id="timerClock" class="clock">30:00</div>
+        <div id="timerSub" class="timer-sub">Choose a run or finisher to begin</div>
+        <div class="timer-actions">
+          <button class="primary" id="timerStartPauseBtn">Start</button>
+          <button class="secondary" id="timerResetBtn">Reset</button>
+        </div>
+      </div>
+      <div id="timerQueue" class="queue-card"></div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <button data-view="runView" class="nav-btn active">🏃<span>Run</span></button>
+    <button data-view="liftView" class="nav-btn">🏋️<span>Lift</span></button>
+    <button data-view="timerView" class="nav-btn">⏱️<span>Timer</span></button>
+  </nav>
+  <script src="app.js"></script>
+</body>
+</html>
